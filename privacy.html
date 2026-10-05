@@ -27,7 +27,7 @@ th{color:var(--fg);font-weight:700}
 <div class="w">
 <h1>개인정보처리방침</h1>
 <p class="sub">더위버 업로더</p>
-<p class="date">최종 수정 2026년 10월 05일</p>
+<p class="date">최종 수정 2026년 10월 06일</p>
 
 <div class="box">
 <p>이 앱은 <b>YouTube API 서비스</b>를 사용합니다. 이 앱을 쓰면
@@ -40,14 +40,14 @@ th{color:var(--fg);font-weight:700}
 <table>
 <tr><th>범위</th><th>쓰는 이유</th></tr>
 <tr><td><code>.../auth/youtube.upload</code></td><td>승인받은 채널에 영상과 롱폼 맞춤 썸네일을 올리기 위해</td></tr>
-<tr><td><code>.../auth/youtube.readonly</code></td><td>어느 채널에 올리는지 확인하고, 채널과 올린 영상의 조회수·시청 시간·구독자 증감·좋아요·댓글·공유 수를 읽기 위해</td></tr>
+<tr><td><code>.../auth/youtube.readonly</code></td><td>어느 채널에 올리는지 확인하고, 채널과 그 채널 영상(이 앱으로 올린 영상 포함)의 조회수·시청 시간·구독자 증감·좋아요·댓글·공유 수를 읽기 위해</td></tr>
 <tr><td><code>.../auth/youtube</code></td><td>비공개로 올린 영상을 유튜브 심사 뒤 공개로 바꾸고, 조회수가 기준에 못 미친 영상을 다시 비공개로 돌리기 위해</td></tr>
 </table>
 
 <h2>2. 다루는 정보</h2>
 <ul>
 <li><b>채널 식별 정보</b> — 채널 ID, 채널명, 프로필·배너 이미지 주소</li>
-<li><b>영상 지표</b> — 이 앱으로 올린 영상의 조회수·좋아요 수·댓글 수</li>
+<li><b>영상 지표</b> — 승인받은 채널의 영상(이 앱으로 올린 영상 포함)의 조회수·좋아요 수·댓글 수</li>
 <li><b>채널 분석 지표</b> — YouTube Analytics API 로 읽는 채널의 일별 조회수·시청 시간·구독자 증감·좋아요·댓글·공유 수와 국가별 조회수(채널 전체의 합계이며 시청자 개인을 식별하지 않습니다)</li>
 <li><b>접근 토큰</b> — 구글이 발급한 리프레시 토큰</li>
 </ul>
@@ -72,7 +72,7 @@ th{color:var(--fg);font-weight:700}
 </ul>
 
 <h2>5. 제3자 제공</h2>
-<p><b>제공하지 않습니다.</b> 판매·공유·광고·분석 목적의 활용이 일절 없습니다.
+<p><b>제공하지 않습니다.</b> 판매·공유·광고에 쓰거나 외부 분석 서비스에 넘기는 일이 일절 없습니다.
 데이터는 구글 API와 운영자의 컴퓨터 사이에서만 오갑니다.
 이 앱은 제3자가 광고나 콘텐츠를 노출하도록 허용하지 않습니다.</p>
 
@@ -107,9 +107,9 @@ to YouTube channels with the channel owner's explicit consent.</p>
 <a href="http://www.google.com/policies/privacy">Google Privacy Policy</a>.</li>
 <li><b>Scopes requested:</b> <code>youtube.upload</code> (to upload videos and custom thumbnails for long-form videos) and
 <code>youtube.readonly</code> (to identify the target channel and read view/like/comment counts
-of videos uploaded by this tool), and youtube (to switch a reviewed private upload to public, and to switch an upload that stays under a
+of the connected channel's videos, including those uploaded by this tool), and youtube (to switch a reviewed private upload to public, and to switch an upload that stays under a
 view threshold back to private).</li>
-<li><b>Data handled:</b> channel ID and title, public metrics of uploaded videos, aggregated channel
+<li><b>Data handled:</b> channel ID and title, view/like/comment counts of the connected channel's videos, aggregated channel
 analytics from the YouTube Analytics API (daily views, watch time, subscribers gained/lost, likes, comments,
 shares, and views by country — channel totals that do not identify individual viewers), and the OAuth
 refresh token.</li>
@@ -119,7 +119,7 @@ selected video list in browser session storage, which is cleared when the window
 <li><b>Third parties:</b> the app does not allow third parties to serve content or advertisements.</li>
 <li><b>Storage:</b> stored only on the operator's local computer. There is no server. Token files
 are permission-restricted to the owner.</li>
-<li><b>Sharing:</b> data is never sold, shared with third parties, or used for advertising or analytics.</li>
+<li><b>Sharing:</b> data is never sold, shared with third parties, used for advertising, or passed to third-party analytics services.</li>
 <li><b>Retention:</b> OAuth tokens are kept only while the channel owner's authorization is active and are
 used only for the consented purposes (uploading, reading metrics, switching between private and public). Video statistics and
 YouTube Analytics metrics are kept as records, and the operator verifies at least every 30 days that the channel
