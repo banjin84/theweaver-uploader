@@ -76,9 +76,13 @@ th{color:var(--fg);font-weight:700}
 
 <h2>6. 보관 기간과 삭제</h2>
 <ul>
-<li>채널 주인이 승인을 철회하면 그 즉시 접근이 끊깁니다</li>
-<li>철회는 <a href="https://myaccount.google.com/permissions">구글 계정 → 보안 → 타사 앱</a> 에서 언제든 가능합니다
-(구글 보안 설정 페이지 <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>)</li>
+<li><b>접근 토큰</b> — 채널 주인의 승인이 살아 있는 동안만 보관하며, 승인받은 목적(업로드·지표 읽기·공개 전환)에만 씁니다</li>
+<li><b>영상·채널 지표</b> — 조회수 등 통계와 YouTube Analytics API 지표는 기록으로 보관하되, 30일마다 채널 주인의 승인이 철회되지 않았는지 확인합니다</li>
+<li><b>그 밖의 정보</b>(채널명·프로필·배너 이미지 주소 등) — 30일을 넘겨 두지 않습니다. 30일이 지나면 유튜브에서 새로 받아 갱신하거나 지웁니다</li>
+<li><b>삭제 요청</b> — 채널 주인이 hmw840507@gmail.com 으로 삭제를 요청하면 가능한 한 빨리, 늦어도 7일 안에 그 채널의 저장 정보를 지웁니다</li>
+<li><b>승인 철회</b> — 채널 주인은 <a href="https://myaccount.google.com/permissions">구글 계정 → 보안 → 타사 앱</a>
+(구글 보안 설정 페이지 <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>)
+에서 언제든 승인을 거둘 수 있습니다. 철회하면 그 즉시 접근이 끊기고, 저장된 그 채널의 정보는 철회일로부터 30일 안에 지웁니다</li>
 <li>업무가 끝나면 해당 채널의 토큰과 저장된 정보를 지웁니다</li>
 </ul>
 
@@ -112,10 +116,18 @@ selected video list in browser session storage, which is cleared when the window
 <li><b>Storage:</b> stored only on the operator's local computer. There is no server. Token files
 are permission-restricted to the owner.</li>
 <li><b>Sharing:</b> data is never sold, shared with third parties, or used for advertising or analytics.</li>
+<li><b>Retention:</b> OAuth tokens are kept only while the channel owner's authorization is active and are
+used only for the consented purposes (uploading, reading metrics, switching to public). Video statistics and
+YouTube Analytics metrics are kept as records, and the operator verifies at least every 30 days that the channel
+owner's authorization has not been revoked. Other API data (such as the channel title and profile/banner image
+URLs) is not kept longer than 30 calendar days; after 30 days it is either refreshed from YouTube or deleted.</li>
 <li><b>Deletion:</b> access ends immediately when the channel owner revokes it at
 <a href="https://myaccount.google.com/permissions">Google Account → Security → Third-party apps</a>
 or the Google security settings page at
-<a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>.</li>
+<a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>,
+and stored data for that channel is deleted within 30 calendar days of the revocation. If a channel owner
+requests deletion by emailing hmw840507@gmail.com, the data is deleted as soon as possible and within
+7 calendar days.</li>
 <li><b>Limited Use:</b> use and transfer of information received from Google APIs adheres to the
 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
 including the Limited Use requirements.</li>
